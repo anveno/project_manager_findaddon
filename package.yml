@@ -1,0 +1,24 @@
+package: project_manager_findaddon
+version: '1.1.0'
+author: 'Stefan Brinkers'
+supportpage: https://github.com/anveno/project_manager_findaddon
+
+# Abhängigkeiten
+# Anforderungen ans System oder anderere AddOns, um dieses AddOn installieren oder update zu können
+requires:
+  redaxo: '^5.11' # benötigt mindestens REDAXO 5.2
+  php:
+    version: '>=7.1' # benötigt mindestens PHP 7
+
+# Seiten des AddOns
+page:
+  title: "Project Manager: Find Addon" # Bezeichnung in der REDAXO Navigation
+  icon: rex-icon fa-handshake-o # Icon von Font Awesome
+  #block: yform_tables               # 'system', um ins Hauptmenü zu verschieben, oder 'kinios', um eigenen kinios-Abschnitt zu erstellen. Weglassen, um bei den Addons gelistet zu werden
+  perm: project_manager_findaddon[]               # Berechtigung, die einer Rolle zugewiesen werden kann. z.B. `admin` für Admin, oder `kinios['xyz']` für dein eigenes Addon
+
+  # Unterseiten
+  subpages:
+    search:
+      title: "Suche"
+      icon: rex-icon fa-th-list
